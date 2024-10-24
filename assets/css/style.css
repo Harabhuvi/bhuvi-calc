@@ -1,0 +1,112 @@
+* {
+    font-family: consolas;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #edf1f4;
+    margin: 0;
+}
+
+.dark {
+    background: #282c2f;
+}
+
+.calculator {
+    position: relative;
+    width: 350px;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1), -5px -5px 20px #fff;
+    background: #fff;
+}
+.calculator-display {
+    overflow-x: auto;
+    padding: 0 10px;
+    box-sizing: border-box;
+    max-height: 120px;
+}
+.calculator .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    background: #f0f0f0;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.calculator .buttons #value {
+    grid-column: span 4;
+    overflow: none;
+    width: 100%;
+    color: #333;
+    height: 60px;
+    line-height: 60px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    padding: 0 10px;
+    font-size: 1.6em;
+    font-weight: 500;
+    background: #f7f7f7;
+}
+
+.calculator .buttons span {
+    position: relative;
+    padding: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1), -3px -3px 10px #fff;
+    cursor: pointer;
+    min-width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    color: #333;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    transition: all 0.2s;
+}
+
+.calculator .buttons span.operator {
+    background: #f44336;
+    color: #fff;
+    font-weight: bold;
+}
+
+.dark .calculator .buttons span.operator {
+    background: #31a935;
+    border: 2px solid #1d6921;
+    color: #fff;
+}
+
+.calculator .buttons span:active {
+    box-shadow: inset 3px 3px 10px rgba(0, 0, 0, 0.1), inset -3px -3px 10px #fff;
+    color: #f44336;
+}
+
+.dark .calculator .buttons span:active {
+    box-shadow: inset 3px 3px 10px rgba(0, 0, 0, 0.1), inset -3px -3px 10px #fff;
+    color: #31a935;
+}
+
+.toggleBtn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #555;
+    cursor: pointer;
+    border: 2px solid #edf1f4;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1), 0px -1px 10px #fff;
+}
+
+@media only screen and (max-width: 599px) {
+    .toggleBtn {
+        display: none;
+    }
+}
